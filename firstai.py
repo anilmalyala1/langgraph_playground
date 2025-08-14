@@ -5,5 +5,5 @@ load_dotenv(find_dotenv(), override=True)
 
 # This is the correct class for Gemini API
 model = ChatGoogleGenerativeAI(model="gemini-2.5-pro")
-response = model.invoke("Hello Gemini, What can u do ?")
+response = model.invoke("Hello Gemini, What can u do.... ?")
 print(response.content)
