@@ -77,36 +77,4 @@ else:
     print(ai.content)
 
 
-"""
-from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv, find_dotenv
-import os
-from langchain.tools import tool
-from duckduckgo_search import DDGS
 
-load_dotenv(find_dotenv())
-
-llm=ChatOpenAI(api_key=os.getenv("GOOGLE_API_KEY"),
-               base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
-               model="gemini-2.0-flash",temperature=0)
-@tool
-def get_weather(city: str) -> str:
-    ""Get weather for a city""
-    return f"Weather in {city}: Sunny, 25°C"
-
-@tool
-def search_web(search_str:str):
-    "" Search Internet for the information
-    Args: search string
-    Returns: Searches internet for the information ""
-    search=DDGS()
-    web = list(search.text(search_str, region="sg-en", max_results=5))
-    print(web)
-    return web
-
-
-llm_tools=llm.bind_tools([get_weather,search_web])   
-response=llm_tools.invoke("List 5 iconic Singapore hawker dishes.")
-
-print(response)
-"""
