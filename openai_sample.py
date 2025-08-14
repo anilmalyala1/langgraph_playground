@@ -14,7 +14,7 @@ resp = client.chat.completions.create(
     model="gemini-2.0-flash",
     messages=[
         {"role": "system", "content": "You are concise and helpful."},
-        {"role": "user", "content": "List 5 iconic Singapore hawker dishes."},
+        {"role": "user", "content": "List 5 iconic Singapore hawker dishes, Where is lau pa sat"},
     ],
 )
 print(resp.choices[0].message.content)
