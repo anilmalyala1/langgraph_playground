@@ -94,7 +94,7 @@ app = workflow.compile()
 
 # Use it
 result = app.invoke({
-    "messages": [{"role": "user", "content": "Hello Gemini!, How is the weather in Hyderabad and where is best place to in Hyderabad ?"}],
+    "messages": [{"role": "user", "content": "Hello Gemini!, How is the weather in Hyderabad and where is best place to stay in Hyderabad ?"}],
     "next": "agent"
 })
 
